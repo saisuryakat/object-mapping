@@ -8,11 +8,12 @@ import java.util.stream.Collectors.toList
 object RelationMapperKt {
 
     fun mapRelationsDOToRelationsDTO(relationsDO: List<RelationDO>): List<RelationDTO> {
-        return relationsDO.stream().map(RelationMapperKt::relationDOToRelationDTO).collect(toList())
+        return relationsDO.map(RelationMapperKt::relationDOToRelationDTO)
     }
 
     fun relationDOToRelationDTO(relationDO: RelationDO): RelationDTO {
-        return RelationDTO(relationDO.name, relationDO
-                .type.toString())
+        return with(relationDO) {
+            RelationDTO(name, type.toString())
+        }
     }
 }
