@@ -1,4 +1,4 @@
-package io.saisuryak.lab.objectmappings.mapper
+package objectmappings.mapper
 
 import io.saisuryak.lab.objectmappings.model.datatransferobject.QualificationDTO
 import io.saisuryak.lab.objectmappings.model.domainobject.QualificationDO

@@ -1,12 +1,12 @@
-package io.saisuryak.lab.objectmappings.mapper;
+package objectmappings.mapper;
 
 import io.saisuryak.lab.objectmappings.model.datatransferobject.PersonDTO;
 import io.saisuryak.lab.objectmappings.model.domainobject.PersonDO;
 
-import static io.saisuryak.lab.objectmappings.mapper.AddressMapper.mapAddressDOToAddressDTO;
-import static io.saisuryak.lab.objectmappings.mapper.ContactMapper.mapContactsDOToContactsDTO;
-import static io.saisuryak.lab.objectmappings.mapper.QualificationMapper.mapQualificationsDOToQualificationsDTO;
-import static io.saisuryak.lab.objectmappings.mapper.RelationMapper.mapRelationsDOToRelationsDTO;
+import static objectmappings.mapper.AddressMapper.mapAddressDOToAddressDTO;
+import static objectmappings.mapper.ContactMapper.mapContactsDOToContactsDTO;
+import static objectmappings.mapper.QualificationMapper.mapQualificationsDOToQualificationsDTO;
+import static objectmappings.mapper.RelationMapper.mapRelationsDOToRelationsDTO;
 
 public class PersonMapper {
 

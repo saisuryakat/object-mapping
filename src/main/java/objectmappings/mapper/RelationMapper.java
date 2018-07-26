@@ -1,4 +1,4 @@
-package io.saisuryak.lab.objectmappings.mapper;
+package objectmappings.mapper;
 
 import io.saisuryak.lab.objectmappings.model.datatransferobject.RelationDTO;
 import io.saisuryak.lab.objectmappings.model.domainobject.RelationDO;

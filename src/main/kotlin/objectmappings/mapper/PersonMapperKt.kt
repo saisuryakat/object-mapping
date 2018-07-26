@@ -1,11 +1,11 @@
-package io.saisuryak.lab.objectmappings.mapper
+package objectmappings.mapper
 
-import io.saisuryak.lab.objectmappings.mapper.AddressMapperKt.mapAddressDOToAddressDTO
-import io.saisuryak.lab.objectmappings.mapper.ContactMapperKt.mapContactsDOToContactsDTO
-import io.saisuryak.lab.objectmappings.mapper.QualificationMapperKt.mapQualificationsDOToQualificationsDTO
-import io.saisuryak.lab.objectmappings.mapper.RelationMapperKt.mapRelationsDOToRelationsDTO
 import io.saisuryak.lab.objectmappings.model.datatransferobject.PersonDTO
 import io.saisuryak.lab.objectmappings.model.domainobject.PersonDO
+import objectmappings.mapper.AddressMapperKt.mapAddressDOToAddressDTO
+import objectmappings.mapper.ContactMapperKt.mapContactsDOToContactsDTO
+import objectmappings.mapper.QualificationMapperKt.mapQualificationsDOToQualificationsDTO
+import objectmappings.mapper.RelationMapperKt.mapRelationsDOToRelationsDTO
 
 object PersonMapperKt {
 
