@@ -1,7 +1,7 @@
 package objectmappings.mapper
 
 import io.saisuryak.lab.objectmappings.model.datatransferobject.PersonDTO
-import io.saisuryak.lab.objectmappings.model.domainobject.PersonDO
+import io.saisuryak.lab.objectmappings.model.domainobject.*
 import objectmappings.mapper.AddressMapperKt.mapAddressDOToAddressDTO
 import objectmappings.mapper.ContactMapperKt.mapContactsDOToContactsDTO
 import objectmappings.mapper.QualificationMapperKt.mapQualificationsDOToQualificationsDTO
@@ -10,25 +10,27 @@ import objectmappings.mapper.RelationMapperKt.mapRelationsDOToRelationsDTO
 object PersonMapperKt {
 
     fun mapPersonDOToPersonDTO(personDO: PersonDO): PersonDTO {
-        val personDTO = PersonDTO()
-        personDTO.id = personDO.id
-        personDTO.name = "${personDO.firstName}${personDO.middleName}${personDO.lastName}"
-        personDTO.age = personDO.age
-        personDTO.identifierNumber = personDO.identifierNumber
-        personDTO.gender = personDO.genderDO.toString()
-        personDTO.address = mapAddressDOToAddressDTO(personDO.addressDO)
-        personDTO.contacts = mapContactsDOToContactsDTO(personDO.contacts)
-        personDTO.dob = personDO.dob
-        personDTO.qualificationDTOS = mapQualificationsDOToQualificationsDTO(personDO
-                .qualificationDOS)
-        personDTO.hobbies = personDO.hobbies
-        personDTO.nationality = personDO.nationalityDO.toString()
-        personDTO.fatherName = personDO.fatherName
-        personDTO.motherName = personDO.motherName
-        personDTO.relationDTOS = mapRelationsDOToRelationsDTO(personDO.relationDOS)
-        return personDTO
-
+        return PersonDTO().apply {
+            id = personDO.id
+            name = with(personDO) { "$firstName$middleName$lastName" }
+            age = personDO.age
+            identifierNumber = personDO.identifierNumber
+            gender = personDO.genderDO.toString()
+            address = personDO.addressDO.toAdressDto()
+            contacts = personDO.contacts.toContactsDto()
+            dob = personDO.dob
+            qualificationDTOS = personDO.qualificationDOS.toQualificationsDto()
+            hobbies = personDO.hobbies
+            nationality = personDO.nationalityDO.toString()
+            fatherName = personDO.fatherName
+            motherName = personDO.motherName
+            relationDTOS = personDO.relationDOS.toRelationsDto()
+        }
     }
 
+    private fun AddressDO.toAdressDto() = mapAddressDOToAddressDTO(this)
+    private fun List<ContactInfoDO>.toContactsDto() = mapContactsDOToContactsDTO(this)
+    private fun List<QualificationDO>.toQualificationsDto() = mapQualificationsDOToQualificationsDTO(this)
+    private fun List<RelationDO>.toRelationsDto() = mapRelationsDOToRelationsDTO(this)
 
 }
