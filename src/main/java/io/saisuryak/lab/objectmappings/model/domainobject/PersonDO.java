@@ -25,7 +25,7 @@ public class PersonDO {
 
     private Instant dob;
 
-    private List<QualificationDO> qualificationDOS;
+    private List<QualificationDO> qualificationsDO;
 
     private List<String> hobbies;
 
@@ -35,7 +35,7 @@ public class PersonDO {
 
     private String motherName;
 
-    private List<RelationDO> relationDOS;
+    private List<RelationDO> relationsDO;
 
     public long getId() {
         return id;
@@ -117,12 +117,12 @@ public class PersonDO {
         this.dob = dob;
     }
 
-    public List<QualificationDO> getQualificationDOS() {
-        return qualificationDOS;
+    public List<QualificationDO> getQualificationsDO() {
+        return qualificationsDO;
     }
 
-    public void setQualificationDOS(List<QualificationDO> qualificationDOS) {
-        this.qualificationDOS = qualificationDOS;
+    public void setQualificationsDO(List<QualificationDO> qualificationsDO) {
+        this.qualificationsDO = qualificationsDO;
     }
 
     public List<String> getHobbies() {
@@ -157,11 +157,33 @@ public class PersonDO {
         this.motherName = motherName;
     }
 
-    public List<RelationDO> getRelationDOS() {
-        return relationDOS;
+    public List<RelationDO> getRelationsDO() {
+        return relationsDO;
     }
 
-    public void setRelationDOS(List<RelationDO> relationDOS) {
-        this.relationDOS = relationDOS;
+    public void setRelationsDO(List<RelationDO> relationsDO) {
+        this.relationsDO = relationsDO;
+    }
+
+    @Override
+    public String toString() {
+        return "PersonDO{" +
+                "id=" + id +
+                ", firstName='" + firstName + '\'' +
+                ", lastName='" + lastName + '\'' +
+                ", middleName='" + middleName + '\'' +
+                ", age='" + age + '\'' +
+                ", identifierNumber='" + identifierNumber + '\'' +
+                ", genderDO=" + genderDO +
+                ", addressDO=" + addressDO +
+                ", contacts=" + contacts +
+                ", dob=" + dob +
+                ", qualificationDOS=" + qualificationsDO +
+                ", hobbies=" + hobbies +
+                ", nationalityDO=" + nationalityDO +
+                ", fatherName='" + fatherName + '\'' +
+                ", motherName='" + motherName + '\'' +
+                ", relationDOS=" + relationsDO +
+                '}';
     }
 }

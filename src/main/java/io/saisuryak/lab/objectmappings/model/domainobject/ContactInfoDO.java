@@ -31,4 +31,13 @@ public class ContactInfoDO {
     public void setActive(boolean active) {
         isActive = active;
     }
+
+    @Override
+    public String toString() {
+        return "ContactInfoDO{" +
+                "type=" + type +
+                ", value='" + value + '\'' +
+                ", isActive=" + isActive +
+                '}';
+    }
 }

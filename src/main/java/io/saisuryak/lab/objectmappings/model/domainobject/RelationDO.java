@@ -21,4 +21,12 @@ public class RelationDO {
     public void setName(String name) {
         this.name = name;
     }
+
+    @Override
+    public String toString() {
+        return "RelationDO{" +
+                "type=" + type +
+                ", name='" + name + '\'' +
+                '}';
+    }
 }

@@ -31,4 +31,13 @@ public class ContactInfoDTO {
     public void setActive(boolean active) {
         isActive = active;
     }
+
+    @Override
+    public String toString() {
+        return "ContactInfoDTO{" +
+                "type='" + type + '\'' +
+                ", value='" + value + '\'' +
+                ", isActive=" + isActive +
+                '}';
+    }
 }

@@ -144,4 +144,24 @@ public class PersonDTO {
     public void setRelationDTOS(List<RelationDTO> relationDTOS) {
         this.relationDTOS = relationDTOS;
     }
+
+    @Override
+    public String toString() {
+        return "PersonDTO{" +
+                "id=" + id +
+                ", name='" + name + '\'' +
+                ", age='" + age + '\'' +
+                ", identifierNumber='" + identifierNumber + '\'' +
+                ", gender='" + gender + '\'' +
+                ", address='" + address + '\'' +
+                ", contacts=" + contacts +
+                ", dob=" + dob +
+                ", qualificationDTOS=" + qualificationDTOS +
+                ", hobbies=" + hobbies +
+                ", nationality='" + nationality + '\'' +
+                ", fatherName='" + fatherName + '\'' +
+                ", motherName='" + motherName + '\'' +
+                ", relationDTOS=" + relationDTOS +
+                '}';
+    }
 }

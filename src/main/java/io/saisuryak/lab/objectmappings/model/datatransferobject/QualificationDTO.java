@@ -41,4 +41,14 @@ public class QualificationDTO {
     public void setToYear(String toYear) {
         this.toYear = toYear;
     }
+
+    @Override
+    public String toString() {
+        return "QualificationDTO{" +
+                "name='" + name + '\'' +
+                ", type='" + type + '\'' +
+                ", fromYear='" + fromYear + '\'' +
+                ", toYear='" + toYear + '\'' +
+                '}';
+    }
 }
