@@ -1,4 +1,4 @@
-package objectmappings.mapper.orika;
+package objectmappings.mapper.framework;
 
 import io.saisuryak.lab.objectmappings.model.datatransferobject.PersonDTO;
 import io.saisuryak.lab.objectmappings.model.domainobject.PersonDO;
@@ -16,7 +16,6 @@ public class PersonOrikaMapper {
     private static MapperFacade getPersonMapper() {
         mapperFactory.classMap(PersonDO.class, PersonDTO.class)
                 .field("genderDO", "gender")
-                .field("addressDO", "address")
                 .field("contactsDO", "contactsDTO")
                 .field("qualificationsDO", "qualificationsDTO")
                 .field("nationalityDO", "nationality")
