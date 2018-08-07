@@ -21,12 +21,12 @@ public class PersonMapper {
         personDTO.setContacts(mapContactsDOToContactsDTO(personDO.getContacts()));
         personDTO.setDob(personDO.getDob());
         personDTO.setQualificationDTOS(mapQualificationsDOToQualificationsDTO(personDO
-                .getQualificationDOS()));
+                .getQualificationsDO()));
         personDTO.setHobbies(personDO.getHobbies());
         personDTO.setNationality(personDO.getNationalityDO().toString());
         personDTO.setFatherName(personDO.getFatherName());
         personDTO.setMotherName(personDO.getMotherName());
-        personDTO.setRelationDTOS(mapRelationsDOToRelationsDTO(personDO.getRelationDOS()));
+        personDTO.setRelationDTOS(mapRelationsDOToRelationsDTO(personDO.getRelationsDO()));
         return personDTO;
 
     }

@@ -4,7 +4,7 @@ import io.saisuryak.lab.objectmappings.model.datatransferobject.QualificationDTO
 import io.saisuryak.lab.objectmappings.model.domainobject.QualificationDO
 
 object QualificationMapperKt {
-
+    @JvmStatic
     fun qualificationDOToQualificationDTO(qualificationDO: QualificationDO): QualificationDTO {
         return QualificationDTO().apply {
             name = qualificationDO.name

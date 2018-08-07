@@ -8,23 +8,23 @@ import objectmappings.mapper.QualificationMapperKt.mapQualificationsDOToQualific
 import objectmappings.mapper.RelationMapperKt.mapRelationsDOToRelationsDTO
 
 object PersonMapperKt {
-
+    @JvmStatic
     fun mapPersonDOToPersonDTO(personDO: PersonDO): PersonDTO {
         return PersonDTO().apply {
             id = personDO.id
-            name = with(personDO) { "$firstName$middleName$lastName" }
+            name = with(personDO) { "$firstName $middleName $lastName" }
             age = personDO.age
             identifierNumber = personDO.identifierNumber
             gender = personDO.genderDO.toString()
             address = personDO.addressDO.toAdressDto()
             contacts = personDO.contacts.toContactsDto()
             dob = personDO.dob
-            qualificationDTOS = personDO.qualificationDOS.toQualificationsDto()
+            qualificationDTOS = personDO.qualificationsDO.toQualificationsDto()
             hobbies = personDO.hobbies
             nationality = personDO.nationalityDO.toString()
             fatherName = personDO.fatherName
             motherName = personDO.motherName
-            relationDTOS = personDO.relationDOS.toRelationsDto()
+            relationDTOS = personDO.relationsDO.toRelationsDto()
         }
     }
 

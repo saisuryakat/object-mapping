@@ -3,10 +3,8 @@ package objectmappings.mapper
 import io.saisuryak.lab.objectmappings.model.datatransferobject.RelationDTO
 import io.saisuryak.lab.objectmappings.model.domainobject.RelationDO
 
-import java.util.stream.Collectors.toList
-
 object RelationMapperKt {
-
+    @JvmStatic
     fun mapRelationsDOToRelationsDTO(relationsDO: List<RelationDO>): List<RelationDTO> {
         return relationsDO.map(RelationMapperKt::relationDOToRelationDTO)
     }
