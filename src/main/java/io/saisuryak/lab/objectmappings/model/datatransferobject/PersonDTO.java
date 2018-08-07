@@ -17,11 +17,11 @@ public class PersonDTO {
 
     private String address;
 
-    private List<ContactInfoDTO> contacts;
+    private List<ContactInfoDTO> contactsDTO;
 
     private Instant dob;
 
-    private List<QualificationDTO> qualificationDTOS;
+    private List<QualificationDTO> qualificationsDTO;
 
     private List<String> hobbies;
 
@@ -31,7 +31,7 @@ public class PersonDTO {
 
     private String motherName;
 
-    private List<RelationDTO> relationDTOS;
+    private List<RelationDTO> relationsDTO;
 
     public long getId() {
         return id;
@@ -81,12 +81,12 @@ public class PersonDTO {
         this.address = address;
     }
 
-    public List<ContactInfoDTO> getContacts() {
-        return contacts;
+    public List<ContactInfoDTO> getContactsDTO() {
+        return contactsDTO;
     }
 
-    public void setContacts(List<ContactInfoDTO> contacts) {
-        this.contacts = contacts;
+    public void setContactsDTO(List<ContactInfoDTO> contactsDTO) {
+        this.contactsDTO = contactsDTO;
     }
 
     public Instant getDob() {
@@ -97,12 +97,12 @@ public class PersonDTO {
         this.dob = dob;
     }
 
-    public List<QualificationDTO> getQualificationDTOS() {
-        return qualificationDTOS;
+    public List<QualificationDTO> getQualificationsDTO() {
+        return qualificationsDTO;
     }
 
-    public void setQualificationDTOS(List<QualificationDTO> qualificationDTOS) {
-        this.qualificationDTOS = qualificationDTOS;
+    public void setQualificationsDTO(List<QualificationDTO> qualificationsDTO) {
+        this.qualificationsDTO = qualificationsDTO;
     }
 
     public List<String> getHobbies() {
@@ -137,12 +137,12 @@ public class PersonDTO {
         this.motherName = motherName;
     }
 
-    public List<RelationDTO> getRelationDTOS() {
-        return relationDTOS;
+    public List<RelationDTO> getRelationsDTO() {
+        return relationsDTO;
     }
 
-    public void setRelationDTOS(List<RelationDTO> relationDTOS) {
-        this.relationDTOS = relationDTOS;
+    public void setRelationsDTO(List<RelationDTO> relationsDTO) {
+        this.relationsDTO = relationsDTO;
     }
 
     @Override
@@ -154,14 +154,14 @@ public class PersonDTO {
                 ", identifierNumber='" + identifierNumber + '\'' +
                 ", gender='" + gender + '\'' +
                 ", address='" + address + '\'' +
-                ", contacts=" + contacts +
+                ", contacts=" + contactsDTO +
                 ", dob=" + dob +
-                ", qualificationDTOS=" + qualificationDTOS +
+                ", qualificationDTOS=" + qualificationsDTO +
                 ", hobbies=" + hobbies +
                 ", nationality='" + nationality + '\'' +
                 ", fatherName='" + fatherName + '\'' +
                 ", motherName='" + motherName + '\'' +
-                ", relationDTOS=" + relationDTOS +
+                ", relationDTOS=" + relationsDTO +
                 '}';
     }
 }

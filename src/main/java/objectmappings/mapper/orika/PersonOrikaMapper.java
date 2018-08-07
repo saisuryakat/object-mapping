@@ -2,9 +2,12 @@ package objectmappings.mapper.orika;
 
 import io.saisuryak.lab.objectmappings.model.datatransferobject.PersonDTO;
 import io.saisuryak.lab.objectmappings.model.domainobject.PersonDO;
+import ma.glasnost.orika.CustomMapper;
 import ma.glasnost.orika.MapperFacade;
 import ma.glasnost.orika.MapperFactory;
+import ma.glasnost.orika.MappingContext;
 import ma.glasnost.orika.impl.DefaultMapperFactory;
+import objectmappings.mapper.AddressMapper;
 
 public class PersonOrikaMapper {
 
@@ -18,6 +21,14 @@ public class PersonOrikaMapper {
                 .field("qualificationsDO", "qualificationsDTO")
                 .field("nationalityDO", "nationality")
                 .field("relationsDO", "relationsDTO")
+                .customize(new CustomMapper<PersonDO, PersonDTO>() {
+                    @Override
+                    public void mapAtoB(PersonDO personDO, PersonDTO personDTO, MappingContext context) {
+                        personDTO.setName(personDO.getFirstName() + personDO.getMiddleName() + personDO.getLastName());
+                        personDTO.setAddress(AddressMapper.mapAddressDOToAddressDTO(personDO.getAddressDO()));
+                        personDTO.setDob(personDTO.getDob());
+                    }
+                })
                 .exclude("dob")
                 .byDefault()
                 .register();

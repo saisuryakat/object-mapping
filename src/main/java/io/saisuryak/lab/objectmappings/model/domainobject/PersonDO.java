@@ -21,7 +21,7 @@ public class PersonDO {
 
     private AddressDO addressDO;
 
-    private List<ContactInfoDO> contacts;
+    private List<ContactInfoDO> contactsDO;
 
     private Instant dob;
 
@@ -101,12 +101,12 @@ public class PersonDO {
         this.addressDO = addressDO;
     }
 
-    public List<ContactInfoDO> getContacts() {
-        return contacts;
+    public List<ContactInfoDO> getContactsDO() {
+        return contactsDO;
     }
 
-    public void setContacts(List<ContactInfoDO> contacts) {
-        this.contacts = contacts;
+    public void setContactsDO(List<ContactInfoDO> contactsDO) {
+        this.contactsDO = contactsDO;
     }
 
     public Instant getDob() {
@@ -176,7 +176,7 @@ public class PersonDO {
                 ", identifierNumber='" + identifierNumber + '\'' +
                 ", genderDO=" + genderDO +
                 ", addressDO=" + addressDO +
-                ", contacts=" + contacts +
+                ", contacts=" + contactsDO +
                 ", dob=" + dob +
                 ", qualificationDOS=" + qualificationsDO +
                 ", hobbies=" + hobbies +

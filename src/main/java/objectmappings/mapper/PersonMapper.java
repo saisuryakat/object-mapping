@@ -18,15 +18,15 @@ public class PersonMapper {
         personDTO.setIdentifierNumber(personDO.getIdentifierNumber());
         personDTO.setGender(personDO.getGenderDO().toString());
         personDTO.setAddress(mapAddressDOToAddressDTO(personDO.getAddressDO()));
-        personDTO.setContacts(mapContactsDOToContactsDTO(personDO.getContacts()));
+        personDTO.setContactsDTO(mapContactsDOToContactsDTO(personDO.getContactsDO()));
         personDTO.setDob(personDO.getDob());
-        personDTO.setQualificationDTOS(mapQualificationsDOToQualificationsDTO(personDO
+        personDTO.setQualificationsDTO(mapQualificationsDOToQualificationsDTO(personDO
                 .getQualificationsDO()));
         personDTO.setHobbies(personDO.getHobbies());
         personDTO.setNationality(personDO.getNationalityDO().toString());
         personDTO.setFatherName(personDO.getFatherName());
         personDTO.setMotherName(personDO.getMotherName());
-        personDTO.setRelationDTOS(mapRelationsDOToRelationsDTO(personDO.getRelationsDO()));
+        personDTO.setRelationsDTO(mapRelationsDOToRelationsDTO(personDO.getRelationsDO()));
         return personDTO;
 
     }

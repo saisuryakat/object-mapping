@@ -17,14 +17,14 @@ object PersonMapperKt {
             identifierNumber = personDO.identifierNumber
             gender = personDO.genderDO.toString()
             address = personDO.addressDO.toAdressDto()
-            contacts = personDO.contacts.toContactsDto()
+            contactsDTO = personDO.contactsDO.toContactsDto()
             dob = personDO.dob
-            qualificationDTOS = personDO.qualificationsDO.toQualificationsDto()
+            qualificationsDTO = personDO.qualificationsDO.toQualificationsDto()
             hobbies = personDO.hobbies
             nationality = personDO.nationalityDO.toString()
             fatherName = personDO.fatherName
             motherName = personDO.motherName
-            relationDTOS = personDO.relationsDO.toRelationsDto()
+            relationsDTO = personDO.relationsDO.toRelationsDto()
         }
     }
 

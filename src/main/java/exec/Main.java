@@ -3,6 +3,7 @@ package exec;
 import io.saisuryak.lab.objectmappings.model.datatransferobject.PersonDTO;
 import io.saisuryak.lab.objectmappings.model.domainobject.*;
 import objectmappings.mapper.PersonMapperKt;
+import objectmappings.mapper.orika.PersonOrikaMapper;
 
 import java.time.Instant;
 import java.util.List;
@@ -54,7 +55,7 @@ public class Main {
         personDO.setDob(Instant.EPOCH);
         personDO.setFatherName("ESport");
         personDO.setMotherName("Logi");
-        personDO.setContacts(contactsDO);
+        personDO.setContactsDO(contactsDO);
         personDO.setAddressDO(addressDO);
         personDO.setHobbies(asList("Reading", "Writing"));
         personDO.setIdentifierNumber("1234567890");
@@ -63,6 +64,8 @@ public class Main {
         personDO.setRelationsDO(relationsDO);
         PersonDTO personDTO = PersonMapperKt.mapPersonDOToPersonDTO(personDO);
         System.out.println(personDTO);
+        PersonDTO personDTOOrika = PersonOrikaMapper.mapPersonDoToPersonDTO(personDO);
+        System.out.println(personDTOOrika);
 
     }
 }
