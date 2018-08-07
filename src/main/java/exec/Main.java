@@ -38,6 +38,12 @@ public class Main {
         relationDO2.setType(RelationTypeDO.SISTER);
         List<RelationDO> relationsDO = asList(relationDO1, relationDO2);
         //=================================================
+        QualificationDO qualificationDO1 = new QualificationDO();
+        qualificationDO1.setName("ABC");
+        qualificationDO1.setType(QualificationTypeDO.SCHOOLING);
+        qualificationDO1.setFromYear("2000");
+        qualificationDO1.setToYear("2010");
+        //=================================================
         PersonDO personDO = new PersonDO();
         personDO.setId(1L);
         personDO.setFirstName("Corvus");
@@ -53,11 +59,6 @@ public class Main {
         personDO.setHobbies(asList("Reading", "Writing"));
         personDO.setIdentifierNumber("1234567890");
         personDO.setNationalityDO(NationalityDO.ENGLISH);
-        QualificationDO qualificationDO1 = new QualificationDO();
-        qualificationDO1.setName("ABC");
-        qualificationDO1.setType(QualificationTypeDO.SCHOOLING);
-        qualificationDO1.setFromYear("2000");
-        qualificationDO1.setToYear("2010");
         personDO.setQualificationsDO(asList(qualificationDO1));
         personDO.setRelationsDO(relationsDO);
         PersonDTO personDTO = PersonMapperKt.mapPersonDOToPersonDTO(personDO);
