@@ -3,7 +3,7 @@ package exec;
 import io.saisuryak.lab.objectmappings.model.datatransferobject.PersonDTO;
 import io.saisuryak.lab.objectmappings.model.domainobject.*;
 import objectmappings.mapper.PersonMapperKt;
-import objectmappings.mapper.framework.MapStructPersonMapperImpl;
+import objectmappings.mapper.framework.MapStructPersonMapper;
 import objectmappings.mapper.framework.PersonOrikaMapper;
 
 import java.time.Instant;
@@ -67,7 +67,7 @@ public class Main {
         System.out.println(personDTO);
         PersonDTO personDTOOrika = PersonOrikaMapper.mapPersonDoToPersonDTO(personDO);
         System.out.println(personDTOOrika);
-        PersonDTO personDTOMapStruct = MapStructPersonMapperImpl.INSTANCE.mapPersonDOToPersonDTO(personDO);
+        PersonDTO personDTOMapStruct = MapStructPersonMapper.INSTANCE.mapPersonDOToPersonDTO(personDO);
         System.out.println(personDTOMapStruct);
 
     }
