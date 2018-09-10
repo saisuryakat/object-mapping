@@ -7,7 +7,8 @@ import static java.util.Optional.ofNullable;
 public class AddressMapper {
 
     public static String mapAddressDOToAddressDTO(AddressDO addressDO) {
-        return String.format("%s%s%s%s%s%s", ofNullable(addressDO.getHouseNumber()).orElse(""),
+        return String.format("%s %s %s %s %s %s",
+                ofNullable(addressDO.getHouseNumber()),
                 ofNullable(addressDO.getAddressLine1()).orElse(""),
                 ofNullable(addressDO.getAddressLine2()).orElse(""),
                 ofNullable(addressDO.getState()).orElse(""),
